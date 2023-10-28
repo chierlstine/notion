@@ -39,6 +39,9 @@
         </div>
         <h1 class="mt-1">Result:</h1>
         <div id="result" style='white-space:pre'>
+        </div>
+        <div>
+          <button type="button" class="btn btn-dark" onclick="ClearFields();">Clear</button>
             
         </div>
       </div>
@@ -79,6 +82,13 @@
                 return;
             }
             navigator.clipboard.writeText(document.getElementById("result").innerHTML);
+        }
+      function ClearFields() {
+
+     document.getElementById("password").value = "";
+     document.getElementById("text").value = "";
+    document.getElementById("result").value = "";
+}
         }
     </script>
   </body>

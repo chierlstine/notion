@@ -35,7 +35,7 @@
         <div>
             <button id="go" type="button" class="btn btn-dark">Generate Text</button>
             <button onclick="copy()" type="button" class="btn btn-dark">Copy to clipboard</button>
-          <button type="button" class="btn btn-dark" onclick="ClearFields();">Clear</button>
+          <button id="clear" type="button" class="btn btn-dark" onclick="ClearFields();">Clear</button>
             
         </div>
         <h1 class="mt-1">Result:</h1>
@@ -81,6 +81,8 @@
             }
             navigator.clipboard.writeText(document.getElementById("result").innerHTML);
         }
+
+      var button = document.getElementById("clear");
       function ClearFields() {
 
      document.getElementById("password").value = "";
